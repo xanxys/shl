@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Elementary Cellular Automata Explorer</title>
+    <title>SHL</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="jquery-3.7.1.min.js"></script>
     <script src="jquery.mousewheel.js"></script>
@@ -12,8 +12,8 @@
 <body>
     <div class="container-fluid">
         <div class="page-header">
-            <h1>Elementary Cellular Automata Explorer
-                <small style="float: right"><a href="https://github.com/xanxys/ecax"><img src="GitHub-Mark-32px.png"
+            <h1>SHL
+                <small style="float: right"><a href="https://github.com/xanxys/shl"><img src="GitHub-Mark-32px.png"
                             width="32" height="32" alt="github" /></a></small>
             </h1>
         </div>
@@ -24,30 +24,9 @@
                     <div class="panel-heading">Rule</div>
 
                     <div class="panel-body">
-                        <div class="form-group" :class="{'has-success': ruleValid, 'has-error': !ruleValid}">
-                            <input id="ui_rule" type="text" class="form-control" v-model="ruleText">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading">Initial State</div>
-
-                    <div class="panel-body">
-                        Left Periodic Part
-                        <div class="form-group" :class="{'has-success': patLValid, 'has-error': !patLValid}">
-                            <textarea id="ui_initial_left" class="form-control" rows="1" v-model="patLText"></textarea>
-                        </div>
-
-                        Center Part
-                        <div class="form-group" :class="{'has-success': patCValid, 'has-error': !patCValid}">
-                            <textarea id="ui_initial_center" class="form-control" rows="1"
-                                v-model="patCText"></textarea>
-                        </div>
-
-                        Right Periodic Part
-                        <div class="form-group" :class="{'has-success': patRValid, 'has-error': !patRValid}">
-                            <textarea id="ui_initial_right" class="form-control" rows="1" v-model="patRText"></textarea>
+                        <div class="form-group" :class="{'has-success': probValid, 'has-error': !probValid}">
+                            Noise Probabilty
+                            <input type="text" class="form-control" v-model="probText">
                         </div>
                     </div>
                 </div>
@@ -58,9 +37,9 @@
             </div>
         </div>
     </div>
-    <script src="eca_st.js"></script>
-    <script src="eca_view.js"></script>
-    <script src="ecax.js"></script>
+    <script src="shl_st.js"></script>
+    <script src="shl_view.js"></script>
+    <script src="shl.js"></script>
 </body>
 
 </html>
